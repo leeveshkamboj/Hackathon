@@ -1,36 +1,4 @@
 <html lang="en">
-<script id="allow-copy_script">
-  (function agent() {
-    let unlock = false;
-    document.addEventListener("allow_copy", (event) => {
-      unlock = event.detail.unlock;
-    });
-
-    const copyEvents = [
-      "copy",
-      "cut",
-      "contextmenu",
-      "selectstart",
-      "mousedown",
-      "mouseup",
-      "mousemove",
-      "keydown",
-      "keypress",
-      "keyup",
-    ];
-    const rejectOtherHandlers = (e) => {
-      if (unlock) {
-        e.stopPropagation();
-        if (e.stopImmediatePropagation) e.stopImmediatePropagation();
-      }
-    };
-    copyEvents.forEach((evt) => {
-      document.documentElement.addEventListener(evt, rejectOtherHandlers, {
-        capture: true,
-      });
-    });
-  })();
-</script>
 <link type="text/css" rel="stylesheet" id="dark-mode-custom-link" />
 <link type="text/css" rel="stylesheet" id="dark-mode-general-link" />
 <style lang="en" type="text/css" id="dark-mode-custom-style"></style>
@@ -38,6 +6,7 @@
 <style lang="en" type="text/css" id="dark-mode-native-sheet"></style>
 
 <head>
+
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
   <link rel="icon" href="./images/icon.png" type="image/gif" sizes="16x16" />
@@ -45,9 +14,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="" />
   <meta name="keywords" content="" />
-  <meta name="google-site-verification" content="RxBYUGLrcaYjJvWSal5JT44dluTnmnk5PO65E6pAYyE" />
   <meta name="author" content="" />
+  <style>
+    .img-responsive {
+      height: 276px !important;
+      display: inline-block;
+      width: 276px !important;
+      object-fit: cover !important;
+    }
+    .tp-bgimg{
+      height: 100%;
+    }
+    @media (max-width:600px) {
+      .tp-bgimg{
 
+        height:350px;
+      }
+    }
+  </style>
   <!-- CSS Files
     ================================================== -->
   <link href="./files/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap" />
@@ -118,14 +102,14 @@
                 <a href="#section-ticket">Categories<span></span></a>
               </li>
               <li>
-                <a href="#section-speakers">Judges<span></span></a>
+                <a href="#section-speakers">Team<span></span></a>
               </li>
               <li>
                 <a href="#section-sponsors">Sponsors<span></span></a>
               </li>
-              <!-- <li>
-                <a href="team.html">Team<span></span></a>
-              </li> -->
+              <li>
+                <a href="./files/INNOVATE-A-THON Brochure.pdf" target="_blank">Brochure<span></span></a>
+              </li>
               <li>
                 <a href="#section-register">FAQ's<span></span></a>
               </li>
@@ -150,68 +134,70 @@
             background-size: cover;
           ">
         <section id="section-hero" class="fullwidthbanner-container" aria-label="section-slider" data-bgcolor="#101010"
-          style="
-              background-color: rgb(16, 16, 16);
-              margin-top: 0px;
-              margin-bottom: 0px;
-              position: absolute;
-              overflow: visible;
-              width: 1905px;
-              left: 0px;
-              background-size: cover;
-            ">
-
-
-
-          <div class="tp-bgimg " style="
-
-            background-color: rgba(0, 0, 0, 0);
-            background-repeat: no-repeat;
-            background-image: url('images/slider/wide2.png');
+        style="
+            background-color: rgb(16, 16, 16);
+            margin-top: 0px;
+            margin-bottom: 0px;
+            position: absolute;
+            overflow: visible;
+            width: 1905px;
+            left: 0px;
             background-size: cover;
-            background-position: center center;
-            width: 100vw;
-            height: 40vmax;
-            opacity: 1;
-            visibility: inherit;
-            z-index: 20;
-            position:relative;
-                      " src="images/slider/wide2.png">
+          ">
 
 
 
-            <div style="position: absolute; bottom: 0; width: 100%;" >
-              <div class="text-center mb-5">
-                <div class="bar2" style="background-size: cover">
-                  <div class="type-wrap" style="background-size: cover">
-                    <span id="typed" style="white-space: pre" class="typed"></span>
-                  </div>
-                </div>
-              </div>
+        <div class="tp-bgimg " style="
+          background-color: rgba(0, 0, 0, 0);
+          background-repeat: no-repeat;
+          background-image: url('images/slider/wide2.png');
+          background-size: cover;
+          background-position: center center;
+          width: 100vw;
+          height: 40vmax;
+          opacity: 1;
+          visibility: inherit;
+          z-index: 20;
+          position:relative;
+                    " src="images/slider/wide2.png">
 
-              <div class="d-lg-flex justify-content-center mb-5 text-center d-none d-lg-block" style="background-size: cover">
-                <div class="h6 padding10 pt0 pb0 text-white" style="background-size: cover">
-                  <i class="i_h3 fa fa-calendar-check-o id-color"></i>May 10th
-                </div>
-                <div class="h6 padding10 pt0 pb0" style="background-size: cover">
-                  <a href="#section-ticket"><img src="./images/icons/cat.png" height="20px" width="20px"
-                      style="margin-right: 10px;">2 Categories</a>
-                </div>
-                <div class="h6 padding10 pt0 pb0" style="background-size: cover">
-                  <a href="#section-ticket"><img src="./images/icons/prob.png" height="20px" width="20px"
-                      style="margin-right: 10px;">3 Problem Statements</a>
-                </div>
-                <div class="h6 padding10 pt0 pb0 text-white" style="background-size: cover">
-                  <i class="i_h3 fa fa-map-marker id-color"></i>UIET, Kurukshetra University
+
+
+          <div style="position: absolute; bottom: 0; width: 100%;" >
+            <div class="text-center mb-5">
+              <div class="bar2" style="background-size: cover">
+                <div class="type-wrap" style="background-size: cover">
+                  <span id="typed" style="white-space: pre" class="typed"></span>
                 </div>
               </div>
             </div>
+
+            <div class="d-lg-flex justify-content-center mb-5 text-center d-none d-lg-block" style="background-size: cover">
+              <div class="h6 padding10 pt0 pb0 text-white" style="background-size: cover">
+                <i class="i_h3 fa fa-calendar-check-o id-color"></i>May 10th
+              </div>
+              <div class="h6 padding10 pt0 pb0" style="background-size: cover">
+                <a href="#section-ticket"><img src="./images/icons/cat.png" height="20px" width="20px"
+                    style="margin-right: 10px;">2 Categories</a>
+              </div>
+              <div class="h6 padding10 pt0 pb0" style="background-size: cover">
+                <a href="#section-ticket"><img src="./images/icons/prob.png" height="20px" width="20px"
+                    style="margin-right: 10px;">3 Problem Statements</a>
+              </div>
+              <div class="h6 padding10 pt0 pb0 text-white" style="background-size: cover">
+                <i class="i_h3 fa fa-map-marker id-color"></i>UIET, Kurukshetra University
+              </div>
+              <div class="h6 padding10 pt0 pb0 text-white">
+                <a href="apply.html" style="background-color: red;   color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Apply</a>
+              </div>
+            </div>
           </div>
+        </div>
 
 
-        </section>
+      </section>
         <div class="tp-fullwidth-forcer d-none d-lg-block" style="width: 100%; height: 40vmax; background-size: cover"></div>
-        <div class="tp-fullwidth-forcer d-block d-lg-none" style="width: 100%; height: 65vmax; background-size: cover">
+        <div class="tp-fullwidth-forcer d-block d-lg-none" style="width: 100%; height: 70vmax; background-size: cover">
        
           <div style="position: absolute; bottom: 0; width: 100%; left:20">
             <div class="d-lg-flex justify-content-center mb-5" style="background-size: cover">
@@ -229,16 +215,16 @@
               <div class="h6 padding10 pt0 pb0 text-white" style="background-size: cover">
                 <i class="i_h3 fa fa-map-marker id-color"></i>UIET, Kurukshetra University
               </div>
+              <div class="h6 padding10 pt0 pb0 text-white  mt-4">
+                <a href="apply.html" style="background-color: red;   color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Apply</a>
+              </div>
             </div>
           </div>
         </div>
-
-        </div>
-      </div>
       </div>
 
       <!-- particles.js container 
-      <div id="particles-js"></div> <!-- stats - count particles -->
+      <div id="particles-js"></div>  stats - count particles -->
       <!-- <div class="count-particles"> <span class="js-count-particles"></span> 
       </div> -->
       <!-- revolution slider close -->
@@ -256,7 +242,9 @@
       </section>
       <!-- </canvas> -->
       <!-- section begin -->
-      <section id="section-about">
+      <section id="section-about" data-bgimage="url(images/bg/1.png) fixed no-repeat" style="
+            background: url('images/bg/1.png') 0% 0% / cover no-repeat fixed;
+          ">
         <div class="wm wm-border dark wow fadeInDown animated" style="
               visibility: visible;
               animation-name: fadeInDown;
@@ -277,7 +265,7 @@
               <h2>INNOVATE-A-THON<br />presented by UIET</h2>
               <p>
                 "INNOVATE-A-THON” focuses on campus-oriented problems where young pioneers collaborate to solve problem
-                statements and earn rewards. This is a 10-hour-long event to address some unease faced by our
+                statements and earn rewards. This is a 9-hour-long event to address some unease faced by our
                 departments. It is a way to bring students together to provide innovative solutions to problems and can
                 also contribute to open innovation. This includes problem statements as well as an open innovation
                 category. Participants will have the opportunity to develop solutions for real-world issues. We welcome
@@ -298,17 +286,17 @@
                   opacity: 500;
                 ">
               <div class="de-images" style="background-size: cover">
-                <img class="di-small wow fadeIn animated" src="./files/2.jpg" alt="" style="
+                <img class="di-small wow fadeIn animated" src="./files/1 (1).png" alt="" style="
                       visibility: visible;
                       animation-name: fadeIn;
                       opacity: 500;
                     " />
-                <img class="di-small-2 wow fadeIn animated" src="./files/3.jpg" alt="" style="
+                <img class="di-small-2 wow fadeIn animated" src="./files/3.png" alt="" style="
                       visibility: visible;
                       animation-name: fadeIn;
                       opacity: 500;
                     " />
-                <img class="di-big img-fluid wow fadeInRight animated" data-wow-delay=".25s" src="./files/1.jpg" alt=""
+                <img class="di-big img-fluid wow fadeInRight animated" data-wow-delay=".25s" src="./files/college.png" alt=""
                   style="
                       visibility: visible;
                       animation-delay: 0.25s;
@@ -491,7 +479,11 @@
       <!-- section close -->
 
       <!-- section begin -->
-      <section id="section-schedule" aria-label="section-services-tab">
+      <section id="section-schedule" aria-label="section-services-tab"
+        data-bgimage="url(images/bg/2.png) fixed center no-repeat" style="
+            background: url('images/bg/2.png') center center / cover no-repeat
+              fixed;
+          ">
         <div class="wm wm-border dark wow fadeInDown animated" style="
               visibility: visible;
               animation-name: fadeInDown;
@@ -560,7 +552,7 @@
                               <h3>Hackathon Launch</h3>
                               <p>
                                 Join us and unleash your skills and innovation to arrive at endless possibilities of
-                                daring solutions
+                                daring solutions.
                               </p>
                             </div>
                             <div class="clearfix" style="background-size: cover"></div>
@@ -848,7 +840,7 @@
               animation-name: fadeInDown;
               background-size: cover;
             ">
-          speakers
+          Team
         </div>
         <div class="container" style="background-size: cover">
           <div class="row" style="background-size: cover">
@@ -857,7 +849,7 @@
                   animation-name: fadeInUp;
                   background-size: cover;
                 ">
-              <h1>Previous Judges and Speakers</h1>
+              <h1>Team Members</h1>
               <div class="separator" style="background-size: cover">
                 <span><i class="fa fa-square"></i></span>
               </div>
@@ -866,267 +858,570 @@
 
             <div class="clearfix" style="background-size: cover"></div>
 
-            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated" style="
-                  visibility: visible;
-                  animation-name: fadeInUp;
-                  background-size: cover;
-                ">
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
               <!-- team member -->
               <div class="de-team-list" style="background-size: cover">
                 <div class="team-pic" style="background-size: cover">
-                  <img src="./files/1.png" class="img-responsive" alt="" />
+                  <img src=".\images\team\IMG_20230210_145433_300 - ECELL UIET.webp" class="img-responsive" alt="" />
                 </div>
                 <div class="team-desc" style="background-size: cover">
-                  <h3>Mr. Saurabh Jain</h3>
-                  <p class="lead">Speaker - FinTech</p>
-                  <div class="small-border" style="background-size: cover"></div>
-                  <p>
-                    Founder, Fun2Do Labs (EdTech Startup), Ex-Vice
-                    President@Paytm, Startup Guru
-                  </p>
-
-                  <div class="social" style="background-size: cover">
-                    <a href="https://www.linkedin.com/in/saurabhskj/" target="_blank"><i
-                        class="fa fa-linkedin fa-lg"></i></a>
-                  </div>
+                  <h3>Himani Hooda</h3>
+                  <p class="lead">Lead Organiser</p>
                 </div>
               </div>
-              <!-- team close -->
             </div>
-
-            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated" style="
-                  visibility: visible;
-                  animation-name: fadeInUp;
-                  background-size: cover;
-                ">
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
               <!-- team member -->
               <div class="de-team-list" style="background-size: cover">
                 <div class="team-pic" style="background-size: cover">
-                  <img src="./files/2.png" class="img-responsive" alt="" />
+                  <img src=".\images\team\AYUSH Raj - AYUSH RAJ.jpg" class="img-responsive" alt="" />
                 </div>
                 <div class="team-desc" style="background-size: cover">
-                  <h3>Dr. Rakshit Tandon</h3>
-                  <p class="lead">Speaker - Security</p>
-                  <div class="small-border" style="background-size: cover"></div>
-                  <p>Founder, Fun2Do Labs Ex-VP, PayTM</p>
-
-                  <div class="social" style="background-size: cover">
-                    <a href="https://www.linkedin.com/in/rakshittandon/" target="_blank"><i
-                        class="fa fa-linkedin fa-lg"></i></a>
-                  </div>
+                  <h3>Aayush Raj</h3>
+                  <p class="lead">Lead Organiser</p>
                 </div>
               </div>
-              <!-- team close -->
             </div>
 
-            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated" style="
-                  visibility: visible;
-                  animation-name: fadeInUp;
-                  background-size: cover;
-                ">
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img src=".\images\team\IMG-20230420-WA0005 - Rohan Saini.jpg" class="img-responsive" alt="profile" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Rohan Saini</h3>
+                  <p class="lead">Lead Organiser</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img src=".\images\team\jpg_20230419_172004_0000 - Umakshi Sharma.jpg" class="img-responsive"
+                    alt="profile" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Umakshi</h3>
+                  <p class="lead">Content Writer</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img src=".\images\team\tanishq.fef2193cfedd55364389_1 - Tanishq Garg.png" class="img-responsive"
+                    alt="profile" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Tanishq Garg</h3>
+                  <p class="lead">Content Writer</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
               <!-- team member -->
               <div class="de-team-list" style="background-size: cover">
                 <div class="team-pic" style="background-size: cover">
-                  <img src="./files/3.png" class="img-responsive" alt="" />
+                  <img src=".\images\team\Yash Pal Goyal - Yash.jpg" class="img-responsive" alt="" />
                 </div>
                 <div class="team-desc" style="background-size: cover">
-                  <h3>Mr. Sumeet Malik</h3>
-                  <p class="lead">Speaker - Education</p>
-                  <div class="small-border" style="background-size: cover"></div>
-                  <p>Founder at Pepcoding Education Private Limited</p>
-
-                  <div class="social" style="background-size: cover">
-                    <a href="https://www.linkedin.com/in/sumeet-malik-ab650410/" target="_blank"><i
-                        class="fa fa-linkedin fa-lg"></i></a>
-                  </div>
+                  <h3>Yash Pal Goyal</h3>
+                  <p class="lead">Content Writer</p>
                 </div>
               </div>
-              <!-- team close -->
             </div>
-
-            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated" style="
-                  visibility: visible;
-                  animation-name: fadeInUp;
-                  background-size: cover;
-                ">
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
               <!-- team member -->
               <div class="de-team-list" style="background-size: cover">
                 <div class="team-pic" style="background-size: cover">
-                  <img src="./files/4.png" class="img-responsive" alt="" />
+                  <img src=".\images\team\20210826_190341 - KASHISH.jpg" class="img-responsive" alt="" />
                 </div>
                 <div class="team-desc" style="background-size: cover">
-                  <h3>Mr. Alon Grinshpoon</h3>
-                  <p class="lead">Speaker - AR/VR</p>
-                  <div class="small-border" style="background-size: cover"></div>
-                  <p>Founder &amp; CEO at echoAR (Techstars '19)</p>
-
-                  <div class="social" style="background-size: cover">
-                    <a href="https://www.linkedin.com/in/alongrinshpoon/" target="_blank"><i
-                        class="fa fa-linkedin fa-lg"></i></a>
-                  </div>
+                  <h3>Kashish</h3>
+                  <p class="lead">Graphic Designer</p>
                 </div>
               </div>
-              <!-- team close -->
             </div>
-
-            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated" style="
-                  visibility: visible;
-                  animation-name: fadeInUp;
-                  background-size: cover;
-                ">
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
               <!-- team member -->
               <div class="de-team-list" style="background-size: cover">
                 <div class="team-pic" style="background-size: cover">
-                  <img src="./files/5.png" class="img-responsive" alt="" />
+                  <img src=".\images\team\pic - Kanishka Mittal.JPG" class="img-responsive" alt="" />
                 </div>
                 <div class="team-desc" style="background-size: cover">
-                  <h3>Mr. Arnav Gupta</h3>
-                  <p class="lead">Speaker - innovation</p>
-                  <div class="small-border" style="background-size: cover"></div>
-                  <p>
-                    EdTech &amp; Mobile Apps | Products, Engineering | Founder
-                    - 1 exit, 1 fail, 1 profit | Comedian
-                  </p>
-
-                  <div class="social" style="background-size: cover">
-                    <a href="https://www.linkedin.com/in/arnavgupta/" target="_blank"><i
-                        class="fa fa-linkedin fa-lg"></i></a>
-                  </div>
+                  <h3>Kanishka Mittal</h3>
+                  <p class="lead">Graphic Designer</p>
                 </div>
               </div>
-              <!-- team close -->
             </div>
-
-            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated" style="
-                  visibility: visible;
-                  animation-name: fadeInUp;
-                  background-size: cover;
-                ">
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
               <!-- team member -->
               <div class="de-team-list" style="background-size: cover">
                 <div class="team-pic" style="background-size: cover">
-                  <img src="./files/6.png" class="img-responsive" alt="" />
+                  <img src=".\images\team\Screenshot_20230421-190633_Photos - SHIVANI.jpg" class="img-responsive"
+                    alt="" />
                 </div>
                 <div class="team-desc" style="background-size: cover">
-                  <h3>Mr. Shivaam Sharma</h3>
-                  <p class="lead">iTrack</p>
-                  <div class="small-border" style="background-size: cover"></div>
-                  <p>
-                    Entrepreneur | Speaker | Investor | Working towards
-                    creating a Borderless World for growth of Global Youth
-                  </p>
-
-                  <div class="social" style="background-size: cover">
-                    <a href="https://www.linkedin.com/in/shivaam/" target="_blank"><i
-                        class="fa fa-linkedin fa-lg"></i></a>
-                  </div>
+                  <h3>Shivani</h3>
+                  <p class="lead">Graphic Designer</p>
                 </div>
               </div>
-              <!-- team close -->
             </div>
-
-            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated" style="
-                  visibility: visible;
-                  animation-name: fadeInUp;
-                  background-size: cover;
-                ">
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
               <!-- team member -->
               <div class="de-team-list" style="background-size: cover">
                 <div class="team-pic" style="background-size: cover">
-                  <img src="./files/7.png" class="img-responsive" alt="" />
+                  <img src=".\images\team\1654791081639 - NIDHI.jpg" class="img-responsive" alt="" />
                 </div>
                 <div class="team-desc" style="background-size: cover">
-                  <h3>Mr. Utkarsh Singh</h3>
-                  <p class="lead">Judge</p>
-                  <div class="small-border" style="background-size: cover"></div>
-                  <p>
-                    PhD Student at Purdue University | Samsung Semiconductor |
-                    NAITS, IIT Delhi | DTU 20
-                  </p>
-
-                  <div class="social" style="background-size: cover">
-                    <a href="https://www.linkedin.com/in/utkarshsingh1998/" target="_blank"><i
-                        class="fa fa-linkedin fa-lg"></i></a>
-                  </div>
+                  <h3>Nidhi </h3>
+                  <p class="lead">Video Editor</p>
                 </div>
               </div>
-              <!-- team close -->
             </div>
-
-            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated" style="
-                  visibility: visible;
-                  animation-name: fadeInUp;
-                  background-size: cover;
-                ">
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
               <!-- team member -->
               <div class="de-team-list" style="background-size: cover">
                 <div class="team-pic" style="background-size: cover">
-                  <img src="./files/8.png" class="img-responsive" alt="" />
+                  <img class="img-responsive" src=".\images\team\20230421_185110 - Vrinda Sharma.jpg" alt="" />
                 </div>
                 <div class="team-desc" style="background-size: cover">
-                  <h3>Ms. Drishti Agarwal</h3>
-                  <p class="lead">Judge</p>
-                  <div class="small-border" style="background-size: cover"></div>
-                  <p>SWE-II @Google | Ex-Adobe</p>
-
-                  <div class="social" style="background-size: cover">
-                    <a href="https://www.linkedin.com/in/drishti-agarwal-211134157/" target="_blank"><i
-                        class="fa fa-linkedin fa-lg"></i></a>
-                  </div>
+                  <h3>Vrinda Sharma </h3>
+                  <p class="lead">Video Editor</p>
                 </div>
               </div>
-              <!-- team close -->
             </div>
-
-            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated" style="
-                  visibility: visible;
-                  animation-name: fadeInUp;
-                  background-size: cover;
-                ">
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
               <!-- team member -->
               <div class="de-team-list" style="background-size: cover">
                 <div class="team-pic" style="background-size: cover">
-                  <img src="./files/9.png" class="img-responsive" alt="" />
+                  <img class="img-responsive" src=".\images\team\puneet - pernoflyer edting.png" alt="" />
                 </div>
                 <div class="team-desc" style="background-size: cover">
-                  <h3>Ms. ISHIKA HOODA</h3>
-                  <p class="lead">Judge</p>
-                  <div class="small-border" style="background-size: cover"></div>
-                  <p>Software Engineer at Amazon Music ML | Ex-Atlassian</p>
-
-                  <div class="social" style="background-size: cover">
-                    <a href="https://www.linkedin.com/in/ishikahooda/" target="_blank"><i
-                        class="fa fa-linkedin fa-lg"></i></a>
-                  </div>
+                  <h3>Puneet Verma</h3>
+                  <p class="lead">Video Editor</p>
                 </div>
               </div>
-              <!-- team close -->
             </div>
-
-            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated" style="
-                  visibility: visible;
-                  animation-name: fadeInUp;
-                  background-size: cover;
-                ">
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
               <!-- team member -->
               <div class="de-team-list" style="background-size: cover">
                 <div class="team-pic" style="background-size: cover">
-                  <img src="./files/10.png" class="img-responsive" alt="" />
+                  <img class="img-responsive" src=".\images\team\IMG-20230311-WA0007 - Arjav Verma.jpg" alt="" />
                 </div>
                 <div class="team-desc" style="background-size: cover">
-                  <h3>Mr. Samarth Gupta</h3>
-                  <p class="lead">Judge</p>
-                  <div class="small-border" style="background-size: cover"></div>
-                  <p>CS@UIUC | Ex-Microsoft | Ex-SAP Labs | DTU'20</p>
-
-                  <div class="social" style="background-size: cover">
-                    <a href="https://www.linkedin.com/in/samarthgupta1011/" target="_blank"><i
-                        class="fa fa-linkedin fa-lg"></i></a>
-                  </div>
+                  <h3>Arjav Verma </h3>
+                  <p class="lead">Promotions</p>
                 </div>
               </div>
-              <!-- team close -->
             </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive"
+                    src=".\images\team\Screenshot_2023-01-17-18-41-59-66_6012fa4d4ddec268fc5c7112cbb265e7 - AGRIM GUPTA.jpg"
+                    alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Agrim Gupta </h3>
+                  <p class="lead">Promotions</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\image - NAMAN.jpg" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Naman Saini</h3>
+                  <p class="lead">Promotions</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\IMG-20230405-WA0008 - ARCHIE GOEL.jpg" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Archie Goel</h3>
+                  <p class="lead">Sponsorship</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\IMG_2885 - Garvit Arora.jpg" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Garvit Arora</h3>
+                  <p class="lead">Sponsorship</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\Keshav 882-5 [ 14-5-2020] - KESHAV Sardana.jpg"
+                    alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Keshav Sardana</h3>
+                  <p class="lead">Sponsorship</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\IMG_20221224_102417_193 - Hitesh Chauhan.jpg" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Hitesh chauhan</h3>
+                  <p class="lead">Social Media Manager</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\InShot_20230421_125049085 - Kunjal Tuli.jpg" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Kunjal Tuli</h3>
+                  <p class="lead">Photography</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\IMG_0319 - KARAN ANAND.jpeg" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Karan Anand</h3>
+                  <p class="lead">Videography</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\IMG_20230421_185922 - ARUSHI JOSHI.jpg" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Arushi Joshi</h3>
+                  <p class="lead">Event Management</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive"
+                    src=".\images\team\B474A22D-6F84-44EA-B48A-061E658218B0 - Shivansh Sharma.jpeg" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Shivansh Sharma</h3>
+                  <p class="lead">Event Management</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive"
+                    src=".\images\team\Screenshot_2023-04-13-22-36-33-50_965bbf4d18d205f782c6b8409c5773a4 - HIMANSHU SHARMA.jpg"
+                    alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Himanshu Sharma</h3>
+                  <p class="lead">Event Management</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\IMG_20230409_204914 - KISHA AGGARWAL.jpg" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Kisha Aggarwal </h3>
+                  <p class="lead">Event Management</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\Himanshu Chauhan - HIMANSHU CHAUHAN.jpeg" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Himanshu chauhan</h3>
+                  <p class="lead">Event Management</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\IMG_20230421_134117 - Lovely Gupta.jpg" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Lovely Gupta</h3>
+                  <p class="lead">Database</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\IMG_20220506_172235_1 - Kushagra.jpg" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Kushagra Varshney</h3>
+                  <p class="lead">Database</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\Screenshot_2023_0421_122608 - SAHIL.jpg" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Sahil</h3>
+                  <p class="lead">Database</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\20220309_164107_05 - LEEVESH KUMAR.jpg" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Leevesh Kumar</h3>
+                  <p class="lead">Tech Lead</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\IMG_20220912_082704-1 - SOURAV SAINI.png" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Sourav Saini</h3>
+                  <p class="lead">Tech</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\IMG-20230419-WA0004 - AMAN KUMAR.jpg" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Aman Kumar</h3>
+                  <p class="lead">Tech</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\images (2) - SURENDER SINGH.png" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Surender Singh</h3>
+                  <p class="lead">Tech</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\IMG_20230412_133358 - GAJENDER YADAV.jpg" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Gajender Yadav</h3>
+                  <p class="lead">Tech</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive"
+                    src=".\images\team\IMG_20230420_124128 - Developers Students' Club (UIET).jpg" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Ankit Garg</h3>
+                  <p class="lead">Hospitality</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\6E91346B-858A-4E28-ACAF-5C6304326556 - SONU YADAV.jpeg"
+                    alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Sonu Yadav </h3>
+                  <p class="lead">Hospitality</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\IMG_2263 - SHANKAR DEV.heic" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Shankar Dev</h3>
+                  <p class="lead">Hospitality</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\IMG_20220627_192239_11zon (1) - AASHISH KUMAR.jpg"
+                    alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Aashish Kumar </h3>
+                  <p class="lead">Hospitality</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\IMG_20220922_221922 - ADITYA CHAUDHARY.JPG" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Aditya chaudhary </h3>
+                  <p class="lead">Hospitality</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\IMG_20230421_223706 - SIDDHARTH.jpg" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Siddharth</h3>
+                  <p class="lead">Hospitality</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              <!-- team member -->
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\IMG-20221118-WA0019 - SIMRAN ZUTSHI.jpg" alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Simran Zutshi</h3>
+                  <p class="lead">Hospitality</p>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp animated animated"
+              style="visibility: visible; animation-name: fadeInUp; background-size: cover; opacity: 0;">
+              
+              <div class="de-team-list" style="background-size: cover">
+                <div class="team-pic" style="background-size: cover">
+                  <img class="img-responsive" src=".\images\team\Screenshot_20230419-100703_Gallery - SUNITA.jpg"
+                    alt="" />
+                </div>
+                <div class="team-desc" style="background-size: cover">
+                  <h3>Sunita</h3>
+                  <p class="lead">Hospitality</p>
+                </div>
+              </div>
+            </div> -->
+
+
 
             <div class="clearfix" style="background-size: cover"></div>
           </div>
@@ -1164,7 +1459,10 @@
       <!-- section close -->
 
       <!-- section begin -->
-      <section id="section-sponsors">
+      <!-- <section id="section-sponsors" data-bgimage="url(images/bg/3.png) fixed center no-repeat" style="
+            background: url('images/bg/3.png') center center / cover no-repeat
+              fixed;
+          ">
         <div class="wm wm-border dark wow fadeInDown animated" style="
               visibility: visible;
               animation-name: fadeInDown;
@@ -1198,29 +1496,29 @@
                 ">
               <h3>Gold Sponsors</h3>
               <div class="spacer-single" style="background-size: cover"></div>
-              <!--               <a href="https://codingblocks.com/" target="_blank"> <img src="./images/logo/g1.png"
-                  alt="CODING BLOCKS LOGO" class="grey-hover" /></a>&emsp;&emsp; -->
+                           <a href="https://codingblocks.com/" target="_blank"> <img src="./images/logo/g1.png"
+                  alt="CODING BLOCKS LOGO" class="grey-hover" /></a>&emsp;&emsp;
               <a href="https://devfolio.co/" target="_blank">
                 <img src="./files/g2.png" alt="DEVFOLIO LOGO" class="grey-hover" /></a>  
               <a href="https://polygon.technology/" target="_blank">
                 <img src="./files/g3.png" alt="POLYGON LOGO" class="grey-hover" /></a>  
-              <!-- <img src="images/logo/4b.png" alt="" class="grey-hover" /> -->
+               <img src="images/logo/4b.png" alt="" class="grey-hover" /> -->
               <!--               <div class="spacer-double"></div>
 
               <h3>Silver Sponsors</h3>
               <div class="spacer-single"></div>
                -->
 
-              <div class="spacer-double" style="background-size: cover"></div>
+              <!-- <div class="spacer-double" style="background-size: cover"></div>
 
               <h3>Silver Sponsors</h3>
-              <div class="spacer-single" style="background-size: cover"></div>
+              <div class="spacer-single" style="background-size: cover"></div> -->
               <!--               <img src="./images/logo/b1.png" alt="" class="grey-hover" />&emsp;&emsp;
               <img src="./images/logo/b2.png" alt="" class="grey-hover" />&emsp;&emsp;
               <img src="./images/logo/b3.png" alt="" class="grey-hover" />&emsp;&emsp;
               <img src="images/logo/8b.png" alt="" class="grey-hover" /> -->
 
-              <a href="https://replit.com/" target="_blank">
+              <!-- <a href="https://replit.com/" target="_blank"> 
                 <img src="./files/s4.png" "="" alt=" REPLIT LOGO" class="grey-hover"></a>  
               <a href="https://filecoin.io/" target="_blank">
                 <img src="./files/s2.png" alt="FILECOIN LOGO" class="grey-hover" /></a>  
@@ -1229,7 +1527,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- section close -->
 
       <!-- section begin -->
@@ -1239,7 +1537,7 @@
               animation-name: fadeInDown;
               background-size: cover;
             ">
-          testimonials
+          Messages
         </div>
         <div class="container" style="background-size: cover">
           <div class="row" style="background-size: cover">
@@ -1259,90 +1557,60 @@
                       ">
                     <div class="owl-item cloned" style="width: 856px; background-size: cover">
                       <blockquote class="testimonial-big">
-                        <span class="title">Exceeded my expectations!</span>
-                        The energy and enthusiasm of the participants,
-                        mentors, and judges were contagious and created a
-                        supportive and dynamic environment. It was truly an
-                        honor to be a part of such a diverse and talented
-                        community and to witness the incredible impact that we
-                        can make when we come together to tackle global
-                        challenges.
+                        <!-- <span class="title">Exceeded my expectations!</span> -->
+                        Organizing this hackathon has been a lot of fun and I sure hope the participants will be able to say the same, can't wait to see the innovative ideas and solutions that the participants will come up with. Looking Forward to the participants' energy and enthusiasm to drive us forward.
 
-                        <span class="name">Mansi Bal, IIT Delhi</span>
+                        <span class="name">Himani Hooda, Lead Organizer</span>
                       </blockquote>
                     </div>
                     <div class="owl-item cloned" style="width: 856px; background-size: cover">
                       <blockquote class="testimonial-big">
-                        <span class="title">Life Changing Experience!</span>
-                        INNOVATE-A-THON was a life-changing experience that I would
-                        highly recommend to anyone looking to make a positive
-                        impact in the world and grow both personally and
-                        professionally.
+                        <!-- <span class="title">Life Changing Experience!</span> -->
+                        As organizers,we're looking forward to bringing together students from different backgrounds and skill sets to work on real-world problems. The collaboration and teamwork that will happen at this event will lead to some truly impressive outcomes.
 
-                        <span class="name">Himanshu, DTU</span>
+
+                        <span class="name">Ayush Raj, Lead Organizer
+                        </span>
                       </blockquote>
                     </div>
                     <div class="owl-item active" style="width: 856px; background-size: cover">
                       <blockquote class="testimonial-big">
-                        <span class="title">Unique Opportunity!</span>
-                        INNOVATE-A-THON provides an unique opportunity to work on
-                        real-world problems and develop innovative solutions.
-                        Through the process of ideation, prototyping, and
-                        presenting our projects, we gained valuable skills in
-                        problem-solving, teamwork, and communication.
+                        <!-- <span class="title">Unique Opportunity!</span> -->
+                        As the organizers, we're excited to provide a platform for you to showcase your coding skills and teamwork abilities. Join us for a chance to gain real-world experience and put your innovations to the test. We believe this event is a great mixture of smart work and hard work and we hope you'll agree!
 
-                        <span class="name">Hemang Sinha, DTU</span>
+                        <span class="name">Umakshi, Content Writer</span>
                       </blockquote>
                     </div>
                     <div class="owl-item" style="width: 856px; background-size: cover">
                       <blockquote class="testimonial-big">
-                        <span class="title">Exceeded my expectations!</span>
-                        The energy and enthusiasm of the participants,
-                        mentors, and judges were contagious and created a
-                        supportive and dynamic environment. It was truly an
-                        honor to be a part of such a diverse and talented
-                        community and to witness the incredible impact that we
-                        can make when we come together to tackle global
-                        challenges.
+                        <!-- <span class="title">Exceeded my expectations!</span> -->
+                        I'm honored to be a part of the organizing committee for this hackathon and can't wait to see the creativity and innovation that the participants will bring to the table. Wishing all the participants the very best of luck!!
 
-                        <span class="name">Mansi Bal, IIT Delhi</span>
-                      </blockquote>
-                    </div>
-                    <div class="owl-item" style="width: 856px; background-size: cover">
-                      <blockquote class="testimonial-big">
-                        <span class="title">Life Changing Experience!</span>
-                        INNOVATE-A-THON was a life-changing experience that I would
-                        highly recommend to anyone looking to make a positive
-                        impact in the world and grow both personally and
-                        professionally.
 
-                        <span class="name">Himanshu, DTU</span>
+                        <span class="name">Tanishq Garg, Content Writer</span>
                       </blockquote>
                     </div>
                     <div class="owl-item cloned" style="width: 856px; background-size: cover">
                       <blockquote class="testimonial-big">
-                        <span class="title">Unique Opportunity!</span>
-                        INNOVATE-A-THON provides an unique opportunity to work on
-                        real-world problems and develop innovative solutions.
-                        Through the process of ideation, prototyping, and
-                        presenting our projects, we gained valuable skills in
-                        problem-solving, teamwork, and communication.
+                        <!-- <span class="title">Unique Opportunity!</span> -->
+                        The hackathon is shaping up to be an amazing experience! I'm confident that this event will be a catalyst for new ideas and solutions.
 
-                        <span class="name">Hemang Sinha, DTU</span>
+                        <span class="name">Gajender Yadav, Web Developer</span>
                       </blockquote>
                     </div>
                     <div class="owl-item cloned" style="width: 856px; background-size: cover">
                       <blockquote class="testimonial-big">
-                        <span class="title">Exceeded my expectations!</span>
-                        The energy and enthusiasm of the participants,
-                        mentors, and judges were contagious and created a
-                        supportive and dynamic environment. It was truly an
-                        honor to be a part of such a diverse and talented
-                        community and to witness the incredible impact that we
-                        can make when we come together to tackle global
-                        challenges.
+                        <!-- <span class="title">Exceeded my expectations!</span> -->
+                        I believe this hackathon will be a game changer for the upcoming events. I hope everyone gets to be a part of it and put themselves to the challenge of solving problems!
 
-                        <span class="name">Mansi Bal, IIT Delhi</span>
+                        <span class="name">Arjav Verma, Promotions</span>
+                      </blockquote>
+                    </div>
+                    <div class="owl-item cloned" style="width: 856px; background-size: cover">
+                      <blockquote class="testimonial-big">
+                        <!-- <span class="title">Exceeded my expectations!</span> -->
+                        व्यवहारिक समस्या समाधान प्रतिस्पर्धाओं से यूनिवर्सिटी इंस्टीट्यूट ऑफ इंजीनियरिंग एंड टेक्नोलॉजी(UIET), कुरुक्षेत्र विश्वविद्यालय में एक जीवंत वातावरण संरचित हो रहा है, जो युवाओं की कार्यनिर्वाह क्षमता को  उँचाइयों तक पहुँचाएगा ।
+                        <span class="name">Yash Pal Goyal, Content Writer</span>
                       </blockquote>
                     </div>
                   </div>
@@ -1354,14 +1622,6 @@
                     <span aria-label="Next">›</span>
                   </button>
                 </div>
-                <div class="owl-dots" style="background-size: cover">
-                  <button role="button" class="owl-dot active">
-                    <span></span></button><button role="button" class="owl-dot"><span></span></button><button
-                    role="button" class="owl-dot">
-                    <span></span>
-                  </button>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -1387,13 +1647,13 @@
                 top: 0px;
               ">
             <div class="picframe" style="background-size: cover">
-              <a href="./files/1(2).jpg" title="Event Photo">
+              <a href="./files/viewimg1.png" title="Event Photo">
                 <span class="overlay" style="opacity: 0; width: 474px; height: 316px">
                   <span class="pf_text" style="margin-top: 118px">
                     <span class="project-name">View Image</span>
                   </span>
                 </span>
-                <img src="./files/1(2).jpg" alt="" />
+                <img src="./files/viewimg1.png" alt="" />
               </a>
             </div>
           </div>
@@ -1407,13 +1667,13 @@
                 top: 0px;
               ">
             <div class="picframe" style="background-size: cover">
-              <a href="./files/2(2).jpg" title="Event Photo">
+              <a href="./files/viewimg2.png" title="Event Photo">
                 <span class="overlay" style="opacity: 0; width: 474px; height: 316px">
                   <span class="pf_text" style="margin-top: 118px">
                     <span class="project-name">View Image</span>
                   </span>
                 </span>
-                <img src="./files/2(2).jpg" alt="" />
+                <img src="./files/viewimg2.png" alt="" />
               </a>
             </div>
           </div>
@@ -1427,13 +1687,13 @@
                 top: 0px;
               ">
             <div class="picframe" style="background-size: cover">
-              <a href="./files/3(1).jpg" title="Event Photo">
+              <a href="./files/viewimg3.png" title="Event Photo">
                 <span class="overlay" style="opacity: 0; width: 474px; height: 316px">
                   <span class="pf_text" style="margin-top: 118px">
                     <span class="project-name">View Image</span>
                   </span>
                 </span>
-                <img src="./files/3(1).jpg" alt="" />
+                <img src="./files/viewimg3.png" alt="" />
               </a>
             </div>
           </div>
@@ -1447,13 +1707,13 @@
                 top: 0px;
               ">
             <div class="picframe" style="background-size: cover">
-              <a href="./files/4.jpg" title="Event Photo">
+              <a href="./files/viewimg4.png" title="Event Photo">
                 <span class="overlay" style="opacity: 0; width: 474px; height: 316px">
                   <span class="pf_text" style="margin-top: 118px">
                     <span class="project-name">View Image</span>
                   </span>
                 </span>
-                <img src="./files/4.jpg" alt="" />
+                <img src="./files/viewimg4.png" alt="" />
               </a>
             </div>
           </div>
@@ -1624,9 +1884,11 @@
             </div>
 
             <div class="col-lg-4 col-md-5 text-right" style="background-size: cover">
+              <a href="apply.html" style="background-color: red;   color: white; padding: 20px 40px; border: none; border-radius: 4px; cursor: pointer;">Apply</a>
+
               <!-- <a href="#section-ticket" class="btn-custom text-white scroll-to">Register Now</a> -->
-              <div class="apply-button" data-hackathon-slug="innovateathon" data-button-theme="light"
-                style="height: 44px; width: 312px"></div>
+              <!-- <div class="apply-button" data-hackathon-slug="innovateathon" data-button-theme="light"
+                style="height: 44px; width: 312px"></div> -->
             </div>
           </div>
         </div>
@@ -1728,7 +1990,7 @@
 
           <div class="p-4 border" style="background-size: cover">
             <div class="text-center" style="background-size: cover">
-              <h1>5,000+</h1>
+              <h2>20,000+</h2>
               <p>UIET KUK ALUMNI</p>
             </div>
           </div>
@@ -1767,12 +2029,11 @@
       <!-- Javascript Files
         
     ================================================== -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/EasePack.min.js"></script>
       <script src="./files/dots.js"></script>
-      <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
 
       <script type="text/javascript" src="./files/jquery.min.js"></script>
       <script src="./files/TweenLite.min.js"></script>
-      <script src="./files/EasePack.min.js"></script>
       <script src="./files/particles.min.js"></script>
       <!-- stats.js lib -->
       <script src="./files/stats.min.js"></script>
@@ -1834,29 +2095,6 @@
       <!-- Main Scripts -->
       <script src="./files/glitche-scripts.js"></script>
     </div>
-  </div>
-  <div id="devfolio-overlay-container" style="
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        display: none;
-        width: 100%;
-        height: 100%;
-        z-index: 2147483647;
-        background-size: cover;
-      ">
-    <iframe src="./files/overlay.html" title="Continue your hackathon application" id="devfolio-overlay-iframe"
-      sandbox="allow-scripts allow-same-origin allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups"
-      style="
-          position: relative;
-          height: 100%;
-          width: 100%;
-          display: block;
-          background-color: transparent;
-          padding: 0px;
-          border: 0px;
-          margin: 0px;
-        "></iframe>
   </div>
 </body>
 

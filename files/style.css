@@ -501,18 +501,19 @@ overflow:visible;
 	/* typer */
 	.typing {
 		position: relative;
-		&::after {
+		
+	}
+	.typing::after{
 			content: "|";
 			position: absolute;
 			right: 0;
 			width: 100%;
 			color: white;
-			background: $bgtype;
+			/* background: $bgtype; */
 			animation: typing 4s steps(16) forwards,
 				caret 1s infinite;
-		}
 	}
-	// Animation
+	/* // Animation */
 	@keyframes typing {
 		to { width: 0 }
 	}
@@ -4283,8 +4284,8 @@ border:solid 1px #ddd;
 	}
 	
 	.de-team-list .team-desc{
-		width:100%;
-		height:100%;
+		width: 276px;
+    	height: 276px;
 		padding:40px;
 		padding-bottom:0;
 		position:absolute;
@@ -7929,5 +7930,6 @@ display:table;
 	
 	.grid-item .pf_title{
 		display:none;
+	}
 	}
 	}
